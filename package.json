@@ -1,0 +1,25 @@
+{
+  "name": "vuejs-typography-filters",
+  "version": "0.0.1",
+  "description": "A collection of filters to help you control your type and own your layout!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankFlitton/vuejs-typography-filters.git"
+  },
+  "keywords": [
+    "vuejs",
+    "filter",
+    "type",
+    "typography"
+  ],
+  "author": "Frank Flitton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrankFlitton/vuejs-typography-filters/issues"
+  },
+  "homepage": "https://github.com/FrankFlitton/vuejs-typography-filters#readme"
+}
