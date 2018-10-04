@@ -11,8 +11,8 @@ Make those typos vanish from your app!
 
 ## Filters
 
-- [typoLowerCase](#typoLowerCase)
 - [typoJsonRichText](#typoJsonRichText)
+- [typoLowerCase](#typoLowerCase)
 - [typoStripTags](#typoStripTags)
 - [typoWidow](#typoWidow)
 
@@ -48,30 +48,6 @@ Vue.use(typoStripTags);
 
 ## Filters
 
-### typoLowerCase
-
-> `import { typoLowerCase } from 'vuejs-typography-filters';`
-
-This filter converts the input to lowercase and trims the text.
-
-*Syntax*
-
-`typoLowerCase`
-
-
-```html
-<p>{{ 'LoWERcase StrInG' | typoLowerCase }}</p>
-<!-- lowercase string -->
-```
-
-```javascript
-const msg1 = this.$typoLowerCase('LoWERcase StrInG')
-
-console.log(msg1) // lowercase string
-```
-
-------
-
 ### typoJsonRichText
 
 > `import { typoJsonRichText } from 'vuejs-typography-filters';`
@@ -96,6 +72,30 @@ console.log(msg1) // <p>Design to create a truly unique experience.</p>
 
 ------
 
+### typoLowerCase
+
+> `import { typoLowerCase } from 'vuejs-typography-filters';`
+
+This filter converts the input to lowercase and trims the text.
+
+*Syntax*
+
+`typoLowerCase`
+
+
+```html
+<p>{{ 'LoWERcase StrInG' | typoLowerCase }}</p>
+<!-- lowercase string -->
+```
+
+```javascript
+const msg1 = this.$typoLowerCase('LoWERcase StrInG')
+
+console.log(msg1) // lowercase string
+```
+
+------
+
 ### typoStripTags
 
 > `import { typoStripTags } from 'vuejs-typography-filters';`
@@ -116,6 +116,30 @@ This filter converts URI encoded JSON to HTML rich text.
 const msg1 = this.$typoStripTags('<span>This text should not have <strong>bolded characters from spans</strong>.</span>')
 
 console.log(msg1) // <p>This text should not have bolded characters from spans.</p>
+```
+
+------
+
+### typoUpperCase
+
+> `import { typoUpperCase } from 'vuejs-typography-filters';`
+
+This filter converts the input to lowercase and trims the text.
+
+*Syntax*
+
+`typoUpperCase`
+
+
+```html
+<p>{{ 'I need attention!' | typoUpperCase }}</p>
+<!-- 	I NEED ATTENTION! -->
+```
+
+```javascript
+const msg1 = this.$typoLowerCase('I need attention!')
+
+console.log(msg1) // I NEED ATTENTION!
 ```
 
 ------

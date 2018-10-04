@@ -30,17 +30,6 @@
         </thead>
         <tbody>
           <tr>
-            <td>typoLowerCase</td>
-            <td>
-              {{ typoLowerCase | typoLowerCase }}
-            </td>
-            <td>
-              <code v-pre>
-                {{ 'How do you &amp; you do?' | typoLowerCase }}
-              </code>
-            </td>
-          </tr>
-          <tr>
             <td>typoJsonRichText</td>
             <td>
               {{ typoJsonRichText | typoJsonRichText }}
@@ -52,6 +41,17 @@
             </td>
           </tr>
           <tr>
+            <td>typoLowerCase</td>
+            <td>
+              {{ typoLowerCase | typoLowerCase }}
+            </td>
+            <td>
+              <code v-pre>
+                {{ 'How do you do?' | typoLowerCase }}
+              </code>
+            </td>
+          </tr>
+          <tr>
             <td>typoStripTags</td>
             <td>
               {{ typoStripTags | typoStripTags }}
@@ -59,6 +59,17 @@
             <td>
               <code v-pre>
                 {{ '&lt;span&gt;This text has &lt;strong&gt;bolded characters from spans&lt;/strong&gt;.&lt;/span&gt;' | typoLowerCase }}
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>typoUpperCase</td>
+            <td>
+              {{ typoUpperCase | typoUpperCase }}
+            </td>
+            <td>
+              <code v-pre>
+                {{ 'I need attention!' | typoUpperCase }}
               </code>
             </td>
           </tr>
@@ -83,9 +94,10 @@
     var app = new Vue({
   el: '#app',
   data: {
-    typoLowerCase: 'How do you & you do?',
     typoJsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
+    typoLowerCase: 'How do you do?',
     typoStripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>',
+    typoUpperCase: 'I need attention!',
     typoWidow: 'This text has a widow at the sentense end.'
   }
 })
