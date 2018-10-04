@@ -125,12 +125,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fflitton@gmail.com/vuejs-typography-filters.git"
+    "url": "git+https://github.com/FrankFlitton/vuejs-typography-filters.git"
   },
   "bugs": {
-    "url": "https://github.com/fflitton@gmail.com/vuejs-typography-filters/issues"
+    "url": "https://github.com/FrankFlitton/vuejs-typography-filters/issues"
   },
-  "homepage": "https://github.com/fflitton@gmail.com/vuejs-typography-filters#readme",
+  "homepage": "https://github.com/FrankFlitton/vuejs-typography-filters#readme",
   "license": {
     "type": "MIT",
     "url": "http://www.opensource.org/licenses/mit-license.php"
