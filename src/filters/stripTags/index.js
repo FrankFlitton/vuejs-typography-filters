@@ -4,7 +4,7 @@ export const stripTags = (Vue) => {
     return typoStripTags(value)
   })
 
-  Vue.prototype.$typotypoStripTags = (value) => {
+  Vue.prototype.$typoStripTags = (value) => {
     return typoStripTags(value)
   }
 
