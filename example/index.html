@@ -1,19 +1,22 @@
 <html>
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="../dist/vuejs-typography-filters.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="../dist/vuejs-typography-filters.js"></script>
 </head>
 <body>
-    <div id="app">
-        {{ `How do you & you do?` | lowerCase }}
-        {{ `How do you & you do?` | upperCase }}
-    </div>
+  <div id="app">
+    lowerCase: {{ lowerCase | lowerCase }} <br />
+    jsonRichText: {{ jsonRichText | jsonRichText }} <br />
+    stripTags: {{ stripTags | stripTags }} <br />
+  </div>
 </body>
 <script>
     var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    lowerCase: 'How do you & you do?',
+    jsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
+    stripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>'
   }
 })
 </script>

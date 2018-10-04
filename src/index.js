@@ -1,10 +1,14 @@
 import { lowerCase } from './filters'
+import { stripTags } from './filters'
+import { jsonRichText } from './filters'
 
 // Complete package
 export const VuejsTypographyFilters = {
   install (Vue, options) {
     // filters
     lowerCase(Vue, options)
+    stripTags(Vue, options)
+    jsonRichText(Vue, options)
   }
 }
 
