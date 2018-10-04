@@ -7,7 +7,6 @@
   "module": "dist/vuejs-typography-filters.esm.js",
   "browser": "dist/vuejs-typography-filters.js",
   "unpkg": "dist/vuejs-typography-filters.js",
-  "style": "dist/vuejs-typography-filters.css",
   "files": [
     "dist",
     "src"
