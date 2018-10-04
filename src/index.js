@@ -1,6 +1,7 @@
 import { typoLowerCase } from './filters'
 import { typoStripTags } from './filters'
 import { typoJsonRichText } from './filters'
+import { upperCase } from './filters'
 import { typoWidow } from './filters'
 
 // Complete package
@@ -10,6 +11,7 @@ export const VuejsTypographyFilters = {
     typoLowerCase(Vue, options)
     typoStripTags(Vue, options)
     typoJsonRichText(Vue, options)
+    upperCase(Vue, options)
     typoWidow(Vue, options)
   }
 }

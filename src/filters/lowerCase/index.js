@@ -4,7 +4,7 @@ export const typoLowerCase = (Vue) => {
     return typoLowerCase(value)
   })
 
-  Vue.prototype.$typotypoLowerCase = (value) => {
+  Vue.prototype.$typoLowerCase = (value) => {
     return typoLowerCase(value)
   }
 
