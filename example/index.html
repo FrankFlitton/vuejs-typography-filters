@@ -8,6 +8,8 @@
     lowerCase: {{ lowerCase | lowerCase }} <br />
     jsonRichText: {{ jsonRichText | jsonRichText }} <br />
     stripTags: {{ stripTags | stripTags }} <br />
+    widow: <span style="width:70px; display:inline-block;">{{ widow | widow }}</span> <br />
+    widow with limit: <span style="width:70px; display:inline-block;">{{ widow | widow('4') }}</span> <br />
   </div>
 </body>
 <script>
@@ -16,7 +18,8 @@
   data: {
     lowerCase: 'How do you & you do?',
     jsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
-    stripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>'
+    stripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>',
+    widow: 'This text had a widow at the end of the sentense.'
   }
 })
 </script>

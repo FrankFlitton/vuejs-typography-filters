@@ -1,6 +1,7 @@
 import { lowerCase } from './filters'
 import { stripTags } from './filters'
 import { jsonRichText } from './filters'
+import { widow } from './filters'
 
 // Complete package
 export const VuejsTypographyFilters = {
@@ -9,6 +10,7 @@ export const VuejsTypographyFilters = {
     lowerCase(Vue, options)
     stripTags(Vue, options)
     jsonRichText(Vue, options)
+    widow(Vue, options)
   }
 }
 
