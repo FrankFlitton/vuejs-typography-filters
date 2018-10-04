@@ -1,11 +1,11 @@
-export const typoWidow = (Vue) => {
+export const widow = (Vue) => {
   Vue.filter('typoWidow', (value, arg1) => {
     if (!value) return
     return typoWidow(value, arg1)
   })
 
   Vue.prototype.$typoWidow = (value, arg1) => {
-    return typoWidow(value)
+    return typoWidow(value, arg1)
   }
 
   function typoWidow (value, arg1) {

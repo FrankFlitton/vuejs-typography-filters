@@ -1,4 +1,4 @@
-export const typoUpperCase = (Vue) => {
+export const upperCase = (Vue) => {
   Vue.filter('typoUpperCase', (value) => {
     if (!value) return
     return typoUpperCase(value)

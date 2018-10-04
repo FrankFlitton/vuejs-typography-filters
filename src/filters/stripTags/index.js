@@ -1,4 +1,4 @@
-export const typoStripTags = (Vue) => {
+export const stripTags = (Vue) => {
   Vue.filter('typoStripTags', (value) => {
     if (!value) return
     return typoStripTags(value)

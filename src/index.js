@@ -1,18 +1,48 @@
-import { typoLowerCase } from './filters'
-import { typoStripTags } from './filters'
-import { typoJsonRichText } from './filters'
+import { jsonRichText } from './filters'
+import { lowerCase } from './filters'
+import { stripTags } from './filters'
 import { upperCase } from './filters'
-import { typoWidow } from './filters'
+import { widow } from './filters'
+
+// Individual filter export
+export const typoJsonRichText = {
+  install (Vue, options) {
+    lowerCase(Vue, options)
+  }
+}
+
+export const typoLowerCase = {
+  install (Vue, options) {
+    lowerCase(Vue, options)
+  }
+}
+
+export const typoStripTags = {
+  install (Vue, options) {
+    stripTags(Vue, options)
+  }
+}
+
+export const typoUpperCase = {
+  install (Vue, options) {
+    upperCase(Vue, options)
+  }
+}
+
+export const typoWidow = {
+  install (Vue, options) {
+    widow(Vue, options)
+  }
+}
 
 // Complete package
 const VuejsTypographyFilters = {
   install (Vue, options) {
-    // filters
-    typoLowerCase(Vue, options)
-    typoStripTags(Vue, options)
-    typoJsonRichText(Vue, options)
+    lowerCase(Vue, options)
+    stripTags(Vue, options)
+    jsonRichText(Vue, options)
     upperCase(Vue, options)
-    typoWidow(Vue, options)
+    widow(Vue, options)
   }
 }
 
@@ -23,9 +53,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default VuejsTypographyFilters
 // export default VuejsTypographyFilters
-const version = '__VERSION__'
-// Export all components too
-export {
-  typoLowerCase,
-  version
-}
+export const version = '__VERSION__'

@@ -1,4 +1,4 @@
-export const typoJsonRichText = (Vue) => {
+export const jsonRichText = (Vue) => {
   Vue.filter('typoJsonRichText', (value) => {
     if (!value) return
     return typoJsonRichText(value)

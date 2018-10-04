@@ -1,4 +1,4 @@
-export const typoLowerCase = (Vue) => {
+export const lowerCase = (Vue) => {
   Vue.filter('typoLowerCase', (value) => {
     if (!value) return
     return typoLowerCase(value)
