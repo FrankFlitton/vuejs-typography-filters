@@ -1,6 +1,6 @@
 {
   "name": "vuejs-typography-filters",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A collection of filters to help you control your type and own your layout!",
   "author": "Frank Flitton <fflitton@gmail.com>",
   "main": "dist/vuejs-typography-filters.common.js",
