@@ -4,7 +4,7 @@ export const jsonRichText = (Vue) => {
     return typoJsonRichText(value)
   })
 
-  Vue.prototype.$typotypoJsonRichText = (value) => {
+  Vue.prototype.$jsonRichText = (value) => {
     return typoJsonRichText(value)
   }
 
