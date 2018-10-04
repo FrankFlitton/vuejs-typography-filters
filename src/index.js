@@ -5,7 +5,7 @@ import { upperCase } from './filters'
 import { typoWidow } from './filters'
 
 // Complete package
-export const VuejsTypographyFilters = {
+const VuejsTypographyFilters = {
   install (Vue, options) {
     // filters
     typoLowerCase(Vue, options)
@@ -21,6 +21,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VuejsTypographyFilters)
 }
 
+export default VuejsTypographyFilters
 // export default VuejsTypographyFilters
 const version = '__VERSION__'
 // Export all components too
