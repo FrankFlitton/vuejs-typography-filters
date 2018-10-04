@@ -1,11 +1,12 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="../index.js"></script>
+    <script src="../dist/vuejs-typography-filters.js"></script>
 </head>
 <body>
     <div id="app">
-        {{ `sup` | uppercase }}
+        {{ `How do you & you do?` | lowerCase }}
+        {{ `How do you & you do?` | upperCase }}
     </div>
 </body>
 <script>

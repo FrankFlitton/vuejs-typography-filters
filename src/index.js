@@ -1,21 +1,22 @@
-import Hello from './Hello.vue'
-import HelloJsx from './Hello.jsx'
+import { lowerCase } from './filters'
 
-function plugin (Vue) {
-  Vue.component('hello', Hello)
-  Vue.component('hello-jsx', HelloJsx)
+// Complete package
+export const VuejsTypographyFilters = {
+  install (Vue, options) {
+    // filters
+    lowerCase(Vue, options)
+  }
 }
 
 // Install by default if using the script tag
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(plugin)
+  window.Vue.use(VuejsTypographyFilters)
 }
 
-export default plugin
+// export default VuejsTypographyFilters
 const version = '__VERSION__'
 // Export all components too
 export {
-  Hello,
-  HelloJsx,
+  lowerCase,
   version
 }
