@@ -14,6 +14,7 @@ Make those typos vanish from your app!
 - [typoJsonRichText](#typoJsonRichText)
 - [typoLowerCase](#typoLowerCase)
 - [typoStripTags](#typoStripTags)
+- [typoTitleCase](#typoTitleCase)
 - [typoUpperCase](#typoUpperCase)
 - [typoWidow](#typoWidow)
 
@@ -121,6 +122,30 @@ console.log(msg1) // <p>This text should not have bolded characters from spans.<
 
 ------
 
+### typoTitleCase
+
+> `import { typoTitleCase } from 'vuejs-typography-filters';`
+
+This filter converts the first character of every word to uppercase and all remainder to lowercase.
+
+*Syntax*
+
+`typoTitleCase`
+
+
+```html
+<p>{{ 'My amazing tItLe' | typoTitleCase }}</p>
+<!-- My Amazing Title -->
+```
+
+```javascript
+const msg1 = this.$typoTitleCase('My amazing tItLe')
+
+console.log(msg1) // My Amazing Title
+```
+
+------
+
 ### typoUpperCase
 
 > `import { typoUpperCase } from 'vuejs-typography-filters';`
@@ -134,11 +159,11 @@ This filter converts the input to lowercase and trims the text.
 
 ```html
 <p>{{ 'I need attention!' | typoUpperCase }}</p>
-<!-- 	I NEED ATTENTION! -->
+<!-- I NEED ATTENTION! -->
 ```
 
 ```javascript
-const msg1 = this.$typoLowerCase('I need attention!')
+const msg1 = this.$typoUpperCase('I need attention!')
 
 console.log(msg1) // I NEED ATTENTION!
 ```

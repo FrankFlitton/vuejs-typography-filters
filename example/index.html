@@ -63,6 +63,17 @@
             </td>
           </tr>
           <tr>
+            <td>typoTitleCase</td>
+            <td>
+              {{ typoTitleCase | typoTitleCase }}
+            </td>
+            <td>
+              <code v-pre>
+                {{ 'My amazing tItLe' | typoTitleCase }}
+              </code>
+            </td>
+          </tr>
+          <tr>
             <td>typoUpperCase</td>
             <td>
               {{ typoUpperCase | typoUpperCase }}
@@ -97,6 +108,7 @@
     typoJsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
     typoLowerCase: 'How do you do?',
     typoStripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>',
+    typoTitleCase: 'My amazing tItLe',
     typoUpperCase: 'I need attention!',
     typoWidow: 'This text has a widow at the sentense end.'
   }
