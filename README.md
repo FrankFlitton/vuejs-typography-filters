@@ -2,7 +2,12 @@
 
 [![npm](https://img.shields.io/npm/v/vuejs-typography-filters.svg)](https://www.npmjs.com/package/vuejs-typography-filters) [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
-> A collection of filters to help you control your type and own your layout!
+This package is WIP.
+
+A collection of filters to help you control your type and own your layout.
+These practical and lightweight filters will help you deliver your interface without compromising on typographic handling.
+
+Make those typos vanish from your app!
 
 ## Filters
 
