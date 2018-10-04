@@ -5,21 +5,21 @@
 </head>
 <body>
   <div id="app">
-    lowerCase: {{ lowerCase | lowerCase }} <br />
-    jsonRichText: {{ jsonRichText | jsonRichText }} <br />
-    stripTags: {{ stripTags | stripTags }} <br />
-    widow: <span style="width:70px; display:inline-block;">{{ widow | widow }}</span> <br />
-    widow with limit: <span style="width:70px; display:inline-block;">{{ widow | widow('4') }}</span> <br />
+    typoLowerCase: {{ typoLowerCase | typoLowerCase }} <br />
+    typoJsonRichText: {{ typoJsonRichText | typoJsonRichText }} <br />
+    typoStripTags: {{ typoStripTags | typoStripTags }} <br />
+    typoWidow: <span style="width:70px; display:inline-block;">{{ typoWidow | typoWidow }}</span> <br />
+    typoWidow with limit: <span style="width:70px; display:inline-block;">{{ typoWidow | typoWidow('3') }}</span> <br />
   </div>
 </body>
 <script>
     var app = new Vue({
   el: '#app',
   data: {
-    lowerCase: 'How do you & you do?',
-    jsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
-    stripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>',
-    widow: 'This text had a widow at the end of the sentense.'
+    typoLowerCase: 'How do you & you do?',
+    typoJsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
+    typoStripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>',
+    typoWidow: 'This text had a typoWidow at the sentense end.'
   }
 })
 </script>

@@ -1,14 +1,14 @@
-export const widow = (Vue) => {
-  Vue.filter('widow', (value, arg1) => {
+export const typoWidow = (Vue) => {
+  Vue.filter('typoWidow', (value, arg1) => {
     if (!value) return
-    return widow(value, arg1)
+    return typoWidow(value, arg1)
   })
 
-  Vue.prototype.$typostripTags = (value, arg1) => {
-    return widow(value)
+  Vue.prototype.$typoWidow = (value, arg1) => {
+    return typoWidow(value)
   }
 
-  function widow (value, arg1) {
+  function typoWidow (value, arg1) {
     const charLimit = Number(arg1) || -1
     const cleanString = value.toString().trim()
     let lastWord = cleanString.split(' ')

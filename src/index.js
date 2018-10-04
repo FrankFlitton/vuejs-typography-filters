@@ -1,16 +1,16 @@
-import { lowerCase } from './filters'
-import { stripTags } from './filters'
-import { jsonRichText } from './filters'
-import { widow } from './filters'
+import { typoLowerCase } from './filters'
+import { typoStripTags } from './filters'
+import { typoJsonRichText } from './filters'
+import { typoWidow } from './filters'
 
 // Complete package
 export const VuejsTypographyFilters = {
   install (Vue, options) {
     // filters
-    lowerCase(Vue, options)
-    stripTags(Vue, options)
-    jsonRichText(Vue, options)
-    widow(Vue, options)
+    typoLowerCase(Vue, options)
+    typoStripTags(Vue, options)
+    typoJsonRichText(Vue, options)
+    typoWidow(Vue, options)
   }
 }
 
@@ -23,6 +23,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 const version = '__VERSION__'
 // Export all components too
 export {
-  lowerCase,
+  typoLowerCase,
   version
 }

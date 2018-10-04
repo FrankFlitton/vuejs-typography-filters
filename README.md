@@ -4,6 +4,13 @@
 
 > A collection of filters to help you control your type and own your layout!
 
+## Filters
+
+- [typoLowerCase](#typoLowerCase)
+- [typoJsonRichText](#typoJsonRichText)
+- [typoStripTags](#typoStripTags)
+- [typoWidow](#typoWidow)
+
 ## Installation
 
 ```bash
@@ -12,67 +19,137 @@ npm install --save vuejs-typography-filters
 
 ## Usage
 
-### Bundler (Webpack, Rollup)
-
-```js
-import Vue from 'vue'
+```javascript
+import Vue from 'vue';
 import VuejsTypographyFilters from 'vuejs-typography-filters'
-// You need a specific loader for CSS files like https://github.com/webpack/css-loader
-import 'vuejs-typography-filters/dist/vuejs-typography-filters.css'
 
-Vue.use(VuejsTypographyFilters)
+// Use all filters and directives.
+Vue.use(VuejsTypographyFilters);
 ```
 
-### Browser
+**or**
+
+```javascript
+import Vue from 'vue';
+import { typoJsonRichText, typoWidow, typoStripTags } from 'vuejs-typography-filters';
+
+// Import only what you need.
+Vue.use(typoJsonRichText);
+Vue.use(typoWidow);
+Vue.use(typoStripTags);
+```
+
+# Typeogrphy Control Filters
+
+## Filters
+
+### typoLowerCase
+
+> `import { typoLowerCase } from 'vuejs-typography-filters';`
+
+This filter converts the input to lowercase and trims the text.
+
+*Syntax*
+
+`typoLowerCase`
+
 
 ```html
-<!-- Include after Vue -->
-<!-- Local files -->
-<link rel="stylesheet" href="vuejs-typography-filters/dist/vuejs-typography-filters.css"></link>
-<script src="vuejs-typography-filters/dist/vuejs-typography-filters.js"></script>
-
-<!-- From CDN -->
-<link rel="stylesheet" href="https://unpkg.com/vuejs-typography-filters/dist/vuejs-typography-filters.css"></link>
-<script src="https://unpkg.com/vuejs-typography-filters"></script>
+<p>{{ 'LoWERcase StrInG' | typoLowerCase }}</p>
+<!-- lowercase string -->
 ```
 
-## Development
+```javascript
+const msg1 = this.$typoLowerCase('LoWERcase StrInG')
 
-### Launch visual tests
-
-```bash
-npm run dev
+console.log(msg1) // lowercase string
 ```
 
-### Launch Karma with coverage
+------
 
-```bash
-npm run dev:coverage
+### typoJsonRichText
+
+> `import { typoJsonRichText } from 'vuejs-typography-filters';`
+
+This filter converts URI encoded JSON to HTML rich text.
+
+*Syntax*
+
+`typoJsonRichText`
+
+
+```html
+<p>{{ '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E' | typoJsonRichText }}</p>
+<!-- <p>Design to create a truly unique experience.</p>  -->
 ```
 
-### Build
+```javascript
+const msg1 = this.$typoJsonRichText('%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E')
 
-Bundle the js and css of to the `dist` folder:
-
-```bash
-npm run build
+console.log(msg1) // <p>Design to create a truly unique experience.</p>
 ```
 
+------
 
-## Publishing
+### typoStripTags
 
-The `prepublish` hook will ensure dist files are created before publishing. This
-way you don't need to commit them in your repository.
+> `import { typoStripTags } from 'vuejs-typography-filters';`
 
-```bash
-# Bump the version first
-# It'll also commit it and create a tag
-npm version
-# Push the bumped package and tags
-git push --follow-tags
-# Ship it 🚀
-npm publish
+This filter converts URI encoded JSON to HTML rich text.
+
+*Syntax*
+
+`typoStripTags`
+
+
+```html
+<p>{{ '<span>This text should not have <strong>bolded characters from spans</strong>.</span>' | typoStripTags }}</p>
+<!-- This text should not have bolded characters from spans. -->
 ```
+
+```javascript
+const msg1 = this.$typoStripTags('<span>This text should not have <strong>bolded characters from spans</strong>.</span>')
+
+console.log(msg1) // <p>This text should not have bolded characters from spans.</p>
+```
+
+------
+
+### typoWidow
+
+> `import { typoWidow } from 'vuejs-typography-filters';`
+
+This filter adds a non-breaking space before the last word of a block of block of text only if the last word is larger than `n`.
+
+*Syntax*
+
+`typoWidow(length)`
+
+```html
+<p>{{ 'This text has a typoWidow at the end' | typoWidow }}</p>
+<!-- This text has a typoWidow at
+the&nbsp;end -->
+
+<p>{{ 'This text has a typoWidow at the end' | typoWidow(3) }}</p>
+<!-- This text has a typoWidow at the
+end -->
+```
+
+```javascript
+const msg1 = this.$typoWidow('This text has a typoWidow at the end.')
+const msg2 = this.$typoWidow('This text has a typoWidow at the end.', 3, 'end')
+
+console.log(msg1) // This text has a typoWidow at the&nbsp;end.
+console.log(msg2) // This text has a typoWidow at the end.
+```
+
+**API**
+
+**option** | **value** | **default** | **required** | **description**
+--- | --- | --- | --- | ---
+`length` | any number | -1 | NO | Indicates the length of the string to be chopped off.
+
+------
 
 ## License
 

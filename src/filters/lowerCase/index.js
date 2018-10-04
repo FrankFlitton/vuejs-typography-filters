@@ -1,14 +1,14 @@
-export const lowerCase = (Vue) => {
-  Vue.filter('lowerCase', (value) => {
+export const typoLowerCase = (Vue) => {
+  Vue.filter('typoLowerCase', (value) => {
     if (!value) return
-    return lowerCase(value)
+    return typoLowerCase(value)
   })
 
-  Vue.prototype.$typoLowercase = (value) => {
-    return lowerCase(value)
+  Vue.prototype.$typotypoLowerCase = (value) => {
+    return typoLowerCase(value)
   }
 
-  function lowerCase (value) {
-    return value.toString().toLowerCase()
+  function typoLowerCase (value) {
+    return value.toString().trim().toLowerCase()
   }
 }

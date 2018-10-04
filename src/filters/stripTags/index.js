@@ -1,14 +1,14 @@
-export const stripTags = (Vue) => {
-  Vue.filter('stripTags', (value) => {
+export const typoStripTags = (Vue) => {
+  Vue.filter('typoStripTags', (value) => {
     if (!value) return
-    return stripTags(value)
+    return typoStripTags(value)
   })
 
-  Vue.prototype.$typostripTags = (value) => {
-    return stripTags(value)
+  Vue.prototype.$typotypoStripTags = (value) => {
+    return typoStripTags(value)
   }
 
-  function stripTags (value) {
+  function typoStripTags (value) {
     return value
       .replace(/<(?:.|\n)*?>/gm, '')
       .trim()
