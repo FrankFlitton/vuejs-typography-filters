@@ -1,6 +1,7 @@
 import { jsonRichText } from './filters'
 import { lowerCase } from './filters'
 import { stripTags } from './filters'
+import { titleCase } from './filters'
 import { upperCase } from './filters'
 import { widow } from './filters'
 
@@ -14,6 +15,12 @@ export const typoJsonRichText = {
 export const typoLowerCase = {
   install (Vue, options) {
     lowerCase(Vue, options)
+  }
+}
+
+export const typoTitleCase = {
+  install (Vue, options) {
+    titleCase(Vue, options)
   }
 }
 
@@ -38,9 +45,10 @@ export const typoWidow = {
 // Complete package
 const VuejsTypographyFilters = {
   install (Vue, options) {
+    jsonRichText(Vue, options)
     lowerCase(Vue, options)
     stripTags(Vue, options)
-    jsonRichText(Vue, options)
+    titleCase(Vue, options)
     upperCase(Vue, options)
     widow(Vue, options)
   }

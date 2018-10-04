@@ -1,5 +1,6 @@
 export * from './lowerCase'
 export * from './stripTags'
+export * from './titleCase'
 export * from './jsonRichText'
 export * from './upperCase'
 export * from './widow'
