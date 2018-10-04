@@ -14,6 +14,7 @@ Make those typos vanish from your app!
 - [typoJsonRichText](#typoJsonRichText)
 - [typoLowerCase](#typoLowerCase)
 - [typoStripTags](#typoStripTags)
+- [typoUpperCase](#typoUpperCase)
 - [typoWidow](#typoWidow)
 
 ## Installation
