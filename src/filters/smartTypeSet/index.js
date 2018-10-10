@@ -1,14 +1,14 @@
-export const smartTypeSet = (Vue) => {
-  Vue.filter('typoSmartTypeSet', (value) => {
+export const smartTypeset = (Vue) => {
+  Vue.filter('typoSmartTypeset', (value) => {
     if (!value) return
-    return typoSmartTypeSet(value)
+    return typoSmartTypeset(value)
   })
 
-  Vue.prototype.$typoSmartTypeSet = (value) => {
-    return typoSmartTypeSet(value)
+  Vue.prototype.$typoSmartTypeset = (value) => {
+    return typoSmartTypeset(value)
   }
 
-  function typoSmartTypeSet (value) {
+  function typoSmartTypeset (value) {
     // Adapted from http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/
     // Inspired by smartypants plugin
     return [

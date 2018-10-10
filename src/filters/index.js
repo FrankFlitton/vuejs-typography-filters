@@ -1,6 +1,6 @@
 export * from './jsonRichText'
 export * from './lowerCase'
-export * from './smartTypeSet'
+export * from './smartTypeset'
 export * from './stripTags'
 export * from './titleCase'
 export * from './upperCase'
