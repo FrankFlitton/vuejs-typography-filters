@@ -13,6 +13,7 @@ Make those typos vanish from your app!
 
 - [typoJsonRichText](#typoJsonRichText)
 - [typoLowerCase](#typoLowerCase)
+- [typoSmartTypeSet](#typoSmartTypeSet)
 - [typoStripTags](#typoStripTags)
 - [typoTitleCase](#typoTitleCase)
 - [typoUpperCase](#typoUpperCase)
@@ -94,6 +95,32 @@ This filter converts the input to lowercase and trims the text.
 const msg1 = this.$typoLowerCase('LoWERcase StrInG')
 
 console.log(msg1) // lowercase string
+```
+
+------
+
+### typoSmartTypeSet
+
+> `import { typoSmartTypeSet } from 'vuejs-typography-filters';`
+
+This filter converts single and double quotes to curly opening and closing quotes, 3 periods to an elipsis and multiple dashes to an en dash.
+
+Inspired by tools like SmartyPants.
+
+*Syntax*
+
+`typoSmartTypeSet`
+
+
+```html
+<p>{{ '\'Some curly... "quotes" for this quote.\' -- Some Guy' | typoSmartTypeSet }}</p>
+<!-- ‘Some curly… “quotes” for this quote.’ — Some Guy	 -->
+```
+
+```javascript
+const msg1 = this.$typoLowerCase('\'Some curly... "quotes" for this quote.\' -- Some Guy')
+
+console.log(msg1) // ‘Some curly… “quotes” for this quote.’ — Some Guy
 ```
 
 ------

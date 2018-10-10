@@ -9,7 +9,9 @@ export const titleCase = (Vue) => {
   }
 
   function typoTitleCase (value) {
-    return value.toString().trim()
+    return value
+      .toString()
+      .trim()
       .replace(
         /\w\S*/g,
         (txt) => {

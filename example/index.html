@@ -52,6 +52,17 @@
             </td>
           </tr>
           <tr>
+            <td>typoSmartQuotes</td>
+            <td>
+              {{ typoSmartQuotes | typoSmartQuotes }}
+            </td>
+            <td>
+              <code v-pre>
+                {{ '\'Some curly... "quotes" for this quote.\' -- Some Guy' | typoSmartQuotes }}
+              </code>
+            </td>
+          </tr>
+          <tr>
             <td>typoStripTags</td>
             <td>
               {{ typoStripTags | typoStripTags }}
@@ -105,8 +116,9 @@
     var app = new Vue({
   el: '#app',
   data: {
-    typoJsonRichText: '%3Cp%3EDesign%20to%20create%20a%20truly%20unique%20experience.%3C%2Fp%3E',
+    typoJsonRichText: '<p>Design%20to%20create%20a%20truly%20unique%20experience.</p>',
     typoLowerCase: 'How do you do?',
+    typoSmartQuotes: '\'Some curly... "quotes" for this quote.\' -- Some Guy',
     typoStripTags: '<span>This text has <strong>bolded characters from spans</strong>.</span>',
     typoTitleCase: 'My amazing tItLe',
     typoUpperCase: 'I need attention!',
